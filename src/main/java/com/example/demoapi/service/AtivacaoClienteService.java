@@ -4,7 +4,6 @@ import com.example.demoapi.model.Cliente;
 import com.example.demoapi.notificacao.Notificador;
 import org.springframework.stereotype.Component;
 
-@Component
 public class AtivacaoClienteService {
 
 
