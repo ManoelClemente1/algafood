@@ -3,11 +3,13 @@ package com.example.demoapi.service;
 import com.example.demoapi.model.Cliente;
 import com.example.demoapi.notificacao.Notificador;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
 @Component
 public class AtivacaoClienteService {
 
+    @Qualifier("urgente")
     @Autowired
     private Notificador notificador;
 
