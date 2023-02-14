@@ -6,19 +6,19 @@ import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Component;
 
-@Profile("prod")
+@Profile("dev")
 @Qualifier("normal")
 @Component
-public class NotificadorEmail implements Notificador {
+public class NotificadorEmailMock implements Notificador {
 
-    public NotificadorEmail(){
-        System.out.println("Notificador email REAL");
+    public NotificadorEmailMock(){
+        System.out.println("Notificador email MOCK");
     }
 
 
     @Override
     public void notificar(Cliente cliente, String mensagem){
-        System.out.println("Notificando ..." + cliente.getEmail() + " usando smtp " + mensagem);
+        System.out.println("MOCK: Notificando..." + cliente.getEmail() + " usando smtp " + mensagem);
     }
 
 }
